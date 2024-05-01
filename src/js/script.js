@@ -10255,7 +10255,7 @@ window.onload = () => {
                   i.createElement(
                     n,
                     {
-                      className: "download-url-button topcoat-button",
+                      className: "download-url-button topcoat-button rounded-pill rounded-start-0",
                       onClick: this.downloadUrl
                     },
                     "Explore"

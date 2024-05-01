@@ -10032,7 +10032,10 @@ window.onload = () => {
               s = e("onlineValidatorBadge", !0);
             return i.createElement(
               t,
-              { className: "swagger-ui shadow rounded-2 rounded-start-0 p-2 border border-info bg-body-tertiary" },
+              {
+                className:
+                  "swagger-ui shadow rounded-2 rounded-start-0 p-2 border border-info bg-body-tertiary"
+              },
               o ? i.createElement(o, null) : null,
               i.createElement(a, null),
               i.createElement(
@@ -10202,9 +10205,9 @@ window.onload = () => {
             } = this.props;
             const n = e("Button"),
               o = e("Link"),
-              a = e('Logo');
-            let s = 'loading' === t.loadingStatus();
-            const u = ['download-url-input', 'topcoat-search-input'];
+              a = e("Logo");
+            let s = "loading" === t.loadingStatus();
+            const u = ["download-url-input", "topcoat-text-input"];
             "failed" === t.loadingStatus() && u.push("failed"),
               s && u.push("loading");
             const { urls: c } = r();
@@ -10220,7 +10223,10 @@ window.onload = () => {
                 f.push(
                   i.createElement(
                     "label",
-                    { className: "select-label topcoat-select", htmlFor: "select" },
+                    {
+                      className: "select-label",
+                      htmlFor: "select"
+                    },
                     i.createElement("span", null, "Select a definition"),
                     i.createElement(
                       "select",
@@ -10238,7 +10244,7 @@ window.onload = () => {
               (l = this.downloadUrl),
                 f.push(
                   i.createElement("input", {
-                    className: [...u,''].join(" "),
+                    className: [...u, "topcoat-text-input", "bg-dark", "text-body"].join(" "),
                     type: "text",
                     onChange: this.onUrlChange,
                     value: this.state.url,
@@ -10257,17 +10263,17 @@ window.onload = () => {
                 );
             return i.createElement(
               "div",
-              { className: "topbar rounded border border-1" },
+              { className: "topbar rounded-pill" },
               i.createElement(
                 "div",
                 { className: "wrapper" },
                 i.createElement(
                   "div",
                   { className: "topbar-wrapper" },
-                  i.createElement(o, null, i.createElement(a, null)),
+                  i.createElement(o, { className: "bg-gradient rounded-pill rounded-end-0" }, i.createElement(a, { className: "" })),
                   i.createElement(
                     "form",
-                    { className: "download-url-wrapper", onSubmit: l },
+                    { className: "download-url-wrapper form", onSubmit: l },
                     f.map((e, t) => (0, i.cloneElement)(e, { key: t }))
                   )
                 )
